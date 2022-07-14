@@ -1,0 +1,147 @@
+<h3> Welcome to style binding </h3>
+
+
+<h3 [style.color]=" 'orange'  "> Style binding  </h3>
+
+
+<!-- Property binding is also possible by evaluating an expression -->
+
+<h3 [style.color]="  hasError ?  'green' : 'red' "> Property binding by evaluating an expression  </h3>
+
+<!-- binding using variables -->
+
+<h3 [style.color]="highlightColor" >  Binding using variables </h3>
+
+
+<!-- Binding using ngStyle , this is used when multiple styles are applied -->
+
+<h3 [ngStyle]="MultipleStyles" > Applying multiple styles  </h3>
+
+
+
+<!-- Working on event binding , event listeners heard from browser  -->
+
+<button type="button" (click)="eventHandler()"> Click for event handler</button>
+
+<button type="button" (click)="listenEventHandlers($event)"> Click to log all event handlers </button>
+
+
+
+<!-- Template reference variables -->
+
+
+<input type="text" placeholder = "type something" #ReferenceVariable>
+
+<button type="button" (click)="logMessage(ReferenceVariable.value)">Log reference variables values</button>
+
+<button type="button" (click)="logMessage(ReferenceVariable)">Log reference variable </button>
+
+
+<h1> Trying some new HTML page after restarting system </h1>
+
+
+
+
+<!--  Working on two way binding -->
+
+<h3> Working on two way binding </h3>
+
+<input type="text" placeholder = "type something">
+
+
+
+<!-- Working on ngIf directive -->
+
+<h3 *ngIf="true" > Code Evolution ngIf directive  </h3>
+
+<!-- Using property values from Angular file -->
+
+<h3 *ngIf="ifDirectiveVariable" > Code Evolution using property value rather then hardCoding  </h3>
+
+<!-- Above statement if given false , then h3 element won't appear in the browser  -->
+
+
+
+
+
+
+
+
+<!-- ngIf directive having else part-->
+
+
+<h3  *ngIf="ifDirectiveVariable; else referenceVariable_else"> This is if part </h3>
+
+<ng-template  #referenceVariable_else>
+
+    <h3> This is else part </h3>
+
+</ng-template>
+
+
+
+
+<!-- Working on subsequent then block-->
+
+
+<h3 *ngIf="ifDirectiveVariable; then thenBlock ;  else elseBlock"> Working on subsequent blocks  </h3>
+
+<ng-template  #thenBlock>
+
+<h3> Subsequent then block </h3>
+
+
+</ng-template >
+
+
+
+<ng-template #elseBlock >
+    <h3> Subsequent else block  </h3>
+</ng-template>
+
+
+
+
+
+
+<!-- ngSwitch directive -->
+
+<h3> ngSwitch statements </h3>
+
+<div [ngSwitch] = "ngSwitchVariable_color" >
+
+
+    <h3 *ngSwitchCase=" 'red' "> Switch case is working in red color </h3>
+    <h3 *ngSwitchCase=" 'green' "> Switch case is working in green color </h3>
+    <h3 *ngSwitchCase=" 'blue' "> Switch case is working in blue color </h3>
+    <h3 *ngSwitchDefault > Switch case = default case</h3>
+
+
+</div>
+
+
+
+
+<!-- ngFor directive -->
+
+
+<h3> Working on ng-for directive </h3>
+
+<div  *ngFor="let a of ngForDirective index as 'alphabet';
+first as 'f_temp' ;
+last as 'last_temp';
+even as 'even_temp' ;
+odd as 'odd_temp'  ">
+
+    <h5> {{alphabet}} - {{a}} , first - {{f_temp}} , last - {{last_temp}} , even - {{even_temp}}  , odd - {{odd_temp}} </h5>
+
+
+</div>
+
+
+
+
+
+
+
+

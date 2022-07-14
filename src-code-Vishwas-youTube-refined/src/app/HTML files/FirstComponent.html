@@ -1,0 +1,51 @@
+<h2> Welcome to first component </h2>
+
+<h3> Welcome Programmer to new world , start coding  </h3>
+
+<h3> My colleague name is  {{colleagueName}}  </h3>
+
+<h4> {{ 4 + 4}} </h4>
+
+<h4> {{"Hello " + colleagueName + " welcome to new company" }}  </h4>
+
+<h4> Length of the variable colleagueName = {{colleagueName.length}}  </h4>
+
+<h4> Displaying method complete code in browser Eg : helloWorld =  {{helloWorld}}  </h4>
+<!-- above code will display entire code written under a function in the browser -->
+
+<h4> Conversion of a variable to upper case =  {{colleagueName.toUpperCase()}}  </h4>
+
+<button type="button" (click)="ClickConsoleMessages()">Console Messages</button>
+
+
+<h4> Calling greet User function = {{greetUser()}}  </h4>
+
+<h3> Trying global JavaScript variable = {{windowObject}}  </h3>
+
+
+<input type="text" value="Programmer" title="empty string">
+
+<br>
+<br>
+
+<!-- Binding property names , sting interpolation using property Binding-->
+
+<input type="text" [disabled]="true" title = "input Tag" [id] = "propertyName1">
+<input type="text" [disabled]="false" title = "input Tag" [id] = "propertyName1">
+
+<br>
+<br>
+
+<!-- above code will use even for string interpolation-->
+
+<input type="text" disabled title = "input Tag" id = {{propertyName1}}>
+
+
+
+<h3>Property binding via a variable from classes </h3>
+
+<!-- Binding property names using variables declared in classes-->
+
+<input type="textarea" [disabled] placeholder="disableHTMLElement = false">
+
+<input type="textarea" [disabled]="disableHTMLElement" placeholder="disableHTMLElement = true">

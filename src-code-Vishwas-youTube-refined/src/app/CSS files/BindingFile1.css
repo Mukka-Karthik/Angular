@@ -1,0 +1,25 @@
+.textSuccess_property
+{
+    color : green;
+
+}
+
+.textFailure_property
+{
+    color : red;
+}
+
+
+.text-special 
+{
+    font-style: italic;
+}
+
+.Binding_JSONObject
+{
+    background-color : red;
+    color : white;
+    font-weight : bold;
+    font-style: italic;
+
+}

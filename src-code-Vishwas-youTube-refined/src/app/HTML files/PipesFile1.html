@@ -1,0 +1,65 @@
+<h3> Welcome to pipes  </h3>
+
+
+<!-- Pipes on strings -->
+<h3> {{name_pipes}}  </h3>
+
+<h3> Converting to lower case = {{name_pipes | lowercase}}  </h3>
+
+<h3> Converting to upper case = {{name_pipes | uppercase}}  </h3>
+
+<h3> Title case = {{name1_pipes | titlecase}}  </h3>
+
+<h3> {{name1_pipes | slice : 5}} </h3>
+
+<!-- In above line of code , Letters will appear on the browser that start from 4th position -->
+
+<h3> {{name1_pipes | slice : 5 : 8}} </h3>
+  
+<!-- In the above line , we can use them to set limit -->
+
+
+<h3> {{json1_pipe | json}}  </h3>
+
+
+
+
+
+
+
+
+<!-- Pipes on numbers -->
+
+
+<h3> {{ 5674.76859 | number : '2.2-3'  }}   </h3>
+<!-- 2 before dot stands for minimum integer numbers and 2 after dot represents minimum decimal numbers and 3 represents maximum limit-->
+
+
+<h3> {{ 5674.76859 | number : '6.7-10'  }}   </h3>
+
+<h3> {{45 | percent}} </h3>   <!-- This represents percentage-->
+
+<h3>  {{4673 | currency }}  </h3>   <!-- This represents currency -->
+
+<!-- Check ISO currency codes for currencies  from other countries -->
+
+<h3> {{5649 | currency : "GooglePay" : "code"}} </h3>
+
+
+
+
+
+
+
+
+<!-- Pipes on date formats -->
+
+
+<h3> {{date_Pipe}}  </h3>
+
+<h3> {{date_Pipe | date :  "short" }}  </h3>
+
+<h3> {{date_Pipe | date :  "shortDate" }}  </h3>
+
+<h3> {{date_Pipe | date :  "shortTime" }}  </h3>
+

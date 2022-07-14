@@ -1,0 +1,34 @@
+<h3> Welcome to programming </h3>
+
+<h3 class="textSuccess_property"> Text success property should appear in green color </h3>
+
+<h3 class="textFailure_property"> Text failure property should appear in red color </h3>
+
+
+
+<!-- When both are used in same HTML element , then property binding takes precedence and regular class won't work -->
+
+
+<h3 class="textSuccess_property" ngClass="textFailure_property"> Text success property and text failure property </h3>
+
+
+
+
+<!-- Binding after evaluating an expression  or code , conditionally applying a class  -->
+
+<h3 [class.textSuccess_property]="colorCode" > Color code function applying here </h3>
+
+
+
+<!-- Applying multiple CSS properties -->
+<h3 class="Binding_JSONObject"> JSON object class binding evaluating true expressions</h3>
+
+
+
+
+
+<!-- Below line of code is not working -->
+
+<!-- applying binding using JSON object , JSON object will work only for true evaluated expressions written inside JSON object -->
+
+<h3 class="JSONObject_bindProperty"> Applying JSON objects binding </h3>
